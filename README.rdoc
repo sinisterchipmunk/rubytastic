@@ -1,0 +1,1 @@
+Part of my response at http://stackoverflow.com/questions/11383048/serious-stuck-on-validations-not-triggered-for-nested-resource-with-fields-for/11495512#11495512

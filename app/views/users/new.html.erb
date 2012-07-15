@@ -1,0 +1,32 @@
+<%= form_for @user do |f| %>
+  <ul class="errors">
+    <% @user.errors.full_messages.each do |message| %>
+      <li class="error"><%= message %></li>
+    <% end%>
+  </ul>
+
+  <p>
+    <%= f.label :email %>
+    <%= f.text_field :email %>
+  </p>
+  
+  <%= f.fields_for :profile do |p| %>
+    <p>
+      <%= p.label :gender %>
+      <%= p.radio_button :gender, 'male' %> male
+      <%= p.radio_button :gender, 'female' %> female
+    </p>
+  
+    <p>
+      <%= p.label :city %>
+      <%= p.text_field :city %>
+    </p>
+    
+    <p>
+      <%= p.label :country %>
+      <%= p.text_field :country %>
+    </p>
+  <% end %>
+  
+  <%= f.submit %>
+<% end %>
