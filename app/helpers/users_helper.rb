@@ -1,2 +1,2 @@
-module TestHelper
+module UsersHelper
 end
